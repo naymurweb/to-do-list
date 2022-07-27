@@ -24,7 +24,8 @@ body {
     font-size: 40px;
     font-weight:bold;
     text-align: center;
-    margin-top: 40px;
+   margin-top: 40px;
+   margin-bottom: 20px;
 }
 
 .search {
@@ -95,7 +96,11 @@ input:focus {
     
 .container{
     width: 360px;
+    height: 100vh;
+    margin: 0%;
 }
-
+.hadding{
+    margin: 60px;
+}
 
   }
