@@ -80,6 +80,7 @@ input:focus {
     background-color: #cad5e261;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 
 }
 #allItem{

@@ -1,0 +1,37 @@
+// add button
+let count = 0;
+document.getElementById("btn").addEventListener("click", function () {
+  count = count + 1;
+  var para = document.getElementById("para");
+  para.innerHTML = `you have ${count} pending tasks`;
+
+  var input = document.getElementById("input");
+
+  var item = document.createElement("div");
+  item.setAttribute("class", "item");
+  item.innerHTML = `
+  <p>${input.value}</p>
+  <button id="btn1" class="btn2"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+    </svg></button>
+  `;
+
+  var allItem = document.getElementById("allItem");
+  allItem.appendChild(item);
+
+  input.value = "";
+});
+
+// delete button
+
+var btn2 = document.querySelector(".btn2");
+btn2.addEventListener("click", function (event) {
+  var allItem = document.getElementById("allItem");
+  console.log(allItem);
+});
+
+// clear button
+document.getElementById("clear").addEventListener("click", function () {
+  var allItem = document.getElementById("allItem");
+  allItem.remove();
+});
