@@ -20,18 +20,25 @@ document.getElementById("btn").addEventListener("click", function () {
   allItem.appendChild(item);
 
   input.value = "";
-});
 
-// delete button
+  // clear button================
+  var items = document.getElementsByClassName("item");
+  var clear = document.getElementById("clear");
+  for (var item of items) {
+    clear.addEventListener("click", function () {
+      item.remove();
+    });
+  }
 
-var btn2 = document.querySelector(".btn2");
-btn2.addEventListener("click", function (event) {
-  var allItem = document.getElementById("allItem");
-  console.log(allItem);
-});
+  // delete button===============================
 
-// clear button
-document.getElementById("clear").addEventListener("click", function () {
-  var allItem = document.getElementById("allItem");
-  allItem.remove();
+  var removeItem = document.getElementsByClassName("btn2");
+  for (remove of removeItem) {
+    remove.addEventListener("click", function (event) {
+      var allItem = event.target.parentNode.parentNode;
+      allItem.remove();
+    });
+  }
+
+  // =================================
 });
